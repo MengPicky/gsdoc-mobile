@@ -1,0 +1,205 @@
+  return DefaultTabController(
+          length: 3,
+          child: Column(
+            children: <Widget>[
+              Container(
+                constraints: BoxConstraints(maxHeight: 150.0),
+                child: Material(
+                  color: Colors.white,
+                  child: TabBar(
+                    labelColor: Colors.blue,
+                    unselectedLabelColor: Colors.black,
+                    tabs: [
+                      Tab(text : "ឯកសារ"),
+                      Tab(text : "កំណត់ត្រា"),
+                      Tab(text : "រូបភាព"),
+                    ],
+                  ),
+                ),
+              ),           
+              Expanded(
+                child: TabBarView(
+                  children: [
+                  Padding(
+                     padding: const EdgeInsets.all(10.0),
+                     child: ListView(
+                       children: [
+                         Padding(
+                           padding: const EdgeInsets.all(10),
+                           child: Row(                                 
+                             crossAxisAlignment: CrossAxisAlignment.start,
+                             mainAxisAlignment: MainAxisAlignment.start,                     
+                             children: [
+                               Expanded(
+                                 flex: 1,
+                                 child: Container(     
+                                    child: Text("លេខឯកសារ",style: mystyle,),                        
+                                 ) 
+                               ),
+                                Expanded(
+                                  flex: 2,
+                                  child: Container(                                 
+                                    child: Text(docinternaldata['document_code'],style: mystyle,),                         
+                                 )                          
+                               ),                                          
+                             ],
+                           ),
+                         ),
+                         Padding(
+                            padding: const EdgeInsets.all(10),
+                            child: Row(                                 
+                             crossAxisAlignment: CrossAxisAlignment.start,
+                             mainAxisAlignment: MainAxisAlignment.start,                     
+                             children: [
+                               Expanded(
+                                 flex: 1,
+                                 child: Container(     
+                                    child: Text("ថ្ងៃខែឆ្នាំ\nឯកសារ",style: mystyle,),                        
+                                 ) 
+                               ),
+                                Expanded(
+                                  flex: 2,
+                                  child: Container(                                 
+                                    child: Text(docinternaldata['arrival_date'],style: mystyle,),                         
+                                 )                          
+                               ),                                          
+                             ],
+                         ),
+                        ),
+                         Padding(
+                            padding: const EdgeInsets.all(10),
+                            child: Row(                                 
+                             crossAxisAlignment: CrossAxisAlignment.start,
+                             mainAxisAlignment: MainAxisAlignment.start,                     
+                             children: [
+                               Expanded(
+                                 flex: 1,
+                                 child: Container(     
+                                    child: Text("មកពីអង្គភាព",style: mystyle,),                        
+                                 ) 
+                               ),
+                                Expanded(
+                                  flex: 2,
+                                  child: Container(                                 
+                                    child: Text("..........",style: mystyle,),                         
+                                 )                          
+                               ),                                          
+                             ],
+                         ),
+                        ),
+                         Padding(
+                            padding: const EdgeInsets.all(10),
+                            child: Row(                                 
+                             crossAxisAlignment: CrossAxisAlignment.start,
+                             mainAxisAlignment: MainAxisAlignment.start,                     
+                             children: [
+                               Expanded(
+                                 flex: 1,
+                                 child: Container(     
+                                    child: Text("អ្នកដាក់ឯកសារ",style: mystyle,),                        
+                                 ) 
+                               ),
+                                Expanded(
+                                  flex: 2,
+                                  child: Container(                                 
+                                    child: Text('.............',style: mystyle,),                         
+                                 )                          
+                               ),                                          
+                             ],
+                         ),
+                        ),
+                         Padding(
+                            padding: const EdgeInsets.all(10),
+                            child: Row(                                 
+                             crossAxisAlignment: CrossAxisAlignment.start,
+                             mainAxisAlignment: MainAxisAlignment.start,                     
+                             children: [
+                               Expanded(
+                                 flex: 1,
+                                 child: Container(     
+                                    child: Text("អ្នកទទួលឯកសារ",style: mystyle,),                        
+                                 ) 
+                               ),
+                                Expanded(
+                                  flex: 2,
+                                  child: Container(                                 
+                                    child: Text(docinternaldata['receiver']['name'],style: mystyle,),                         
+                                 )                          
+                               ),                                          
+                             ],
+                         ),
+                        ),
+                         Padding(
+                            padding: const EdgeInsets.all(10),
+                            child: Row(                                 
+                             crossAxisAlignment: CrossAxisAlignment.start,
+                             mainAxisAlignment: MainAxisAlignment.start,                     
+                             children: [
+                               Expanded(
+                                 flex: 1,
+                                 child: Container(     
+                                    child: Text("ជាដីការអម",style: mystyle,),                        
+                                 ) 
+                               ),
+                                Expanded(
+                                  flex: 2,
+                                  child: Container(                                 
+                                    child: Text("..........",style: mystyle,),                         
+                                 )                          
+                               ),                                          
+                             ],
+                         ),
+                        ),
+                         Padding(
+                            padding: const EdgeInsets.all(10),
+                            child: Row(                                 
+                             crossAxisAlignment: CrossAxisAlignment.start,
+                             mainAxisAlignment: MainAxisAlignment.start,                     
+                             children: [
+                               Expanded(
+                                 flex: 1,
+                                 child: Container(     
+                                    child: Text("ប្រភេទឯកសារ",style: mystyle,),                        
+                                 ) 
+                               ),
+                                Expanded(
+                                  flex: 2,
+                                  child: Container(                                 
+                                    child: Text(docinternaldata['document_type']['title'],style: mystyle,),                         
+                                 )                          
+                               ),                                          
+                             ],
+                         ),
+                        ),
+                         Padding(
+                            padding: const EdgeInsets.all(10),
+                            child: Row(                                 
+                             crossAxisAlignment: CrossAxisAlignment.start,
+                             mainAxisAlignment: MainAxisAlignment.start,                     
+                             children: [
+                               Expanded(
+                                 flex: 1,
+                                 child: Container(     
+                                    child: Text("កម្មវត្ថុ",style: mystyle,),                        
+                                 ) 
+                               ),
+                                Expanded(
+                                  flex: 2,
+                                  child: Container(                                 
+                                    child: Text(docinternaldata['objective'],style: mystyle,),                         
+                                 )                          
+                               ),                                          
+                             ],
+                         ),
+                        ),
+                       ],
+                     ),
+                   ),
+                  mydocnotecount(),
+                 mydocincardfiles()
+                 ],
+                ),
+              ),
+            ],
+          ),
+        );
